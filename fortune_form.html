@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Fortune Form
+        </title>
+    </head>
+    <body class=body>
+            <div class=fortune>
+                <h3 class=> Welcome! Please fill out the form below to determine your future.  </h3>
+            <form action='/fortune_results' method='GET'>
+            Please enter your name.
+            <input type='text' name='name'>
+
+            <h2>Please select your gender:</h2>
+         <input type="radio" name="gender" value="male"> Male<br>
+         <input type="radio" name="gender" value="female"> Female<br>
+         <input type="radio" name="gender" value="other"> Other<br>
+
+              <h2> Between these animals, which is the cutest?</h2>
+                <input type="checkbox" name="Bunny" value="Bunny"><h4>Bunny</h4>
+                <input type="checkbox" name="Doggo" value="Doggo"><h4>Doggo</h4>
+                <input type="checkbox" name="Cat" value="Cat"><h4>Cat</h4>
+                <input type="checkbox" name="Birb" value="Birb"><h4>Birb</h4>
+                <input type="checkbox" name="Horse" value="Horse"><h4>Horse</h4>
+
+
+         <h2> What is your zodiac sign? </h2>
+               <select name="horoscope" form="horoscope">
+               <option value="Aries">Aries</option>
+               <option value="Capricorn">Capricorn</option>
+               <option value="Aquarius">Aquarius</option>
+               <option value="Pisces">Pisces</option>
+               <option value="Taurus">Taurus</option>
+               <option value="Gemini">Gemini</option>
+               <option value="Cancer">Cancer</option>
+               <option value="Leo">Leo</option>
+               <option value="Virgo">Virgo</option>
+               <option value="Libra">Libra</option>
+               <option value="Scorpio">Scorpio</option>
+               <option value="Sagittarius">Sagittarius</option>
+
+               </select>
+
+               <form action="/action_page.php">
+        <h2> Please select your favorite color:</h2> <input type="color" name="favcolor" value="#ff0000"><br><br>
+        <input type="submit">
+       </form>
+</form>
+
+</body>
