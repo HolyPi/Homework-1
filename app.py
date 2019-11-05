@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import random
+
 
 app = Flask(__name__)
 
@@ -8,7 +8,7 @@ def index():
     """Renders the home page with links to Fortune and Weather."""
     return render_template('index.html')
 
-@app.route('/fortune', methods=['GET', 'POST'])
+@app.route('/fortune')
 def fortune():
     return render_template('fortune_form.html')
 
@@ -16,24 +16,22 @@ def fortune():
 def fortune_results():
     """Displays the user's fortune."""
     animal = request.args.get('animal')
-    
+    horoscope = request.args.get('horoscope')
+
 
 
     if animal == 'bunny':
-        fortune is "Some bunny loves you!"
+        return render_template('bunny.html')
     elif animal == 'doggo':
-        fortune is "Don't fur-get that you're the best!"
+        return render_template('doggo.html')
     elif animal == 'cat':
-        fortune is "Cat-titude is everything!"
+        return render_template('cat.html')
     elif animal == 'birb':
-        fortune is "You're im-peck-able!"
+        return render_template('birb.html')
     elif animal == 'horse':
-        fortune is "Hay, you'll have a fantastic day!"
+        return render_template('horse.html')
 
 
-
-
-    return render_template('fortune_results.html', fortune=fortune)
 
     if __name__ == '__main__':
         app.run()
